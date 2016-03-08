@@ -1,0 +1,8 @@
+<%= link_to "logout", logout_path, method: :delete %>
+<p>
+  <% @tools.each do |tool| %>
+    <p><%= tool.name %> - <%= tool.quantity %> <%= link_to "Learn more about #{tool.name}", tool_path(tool.id) %> </p>
+  <% end %>
+
+  <%= link_to "Enter a New Tool", new_tool_path %>
+</p>

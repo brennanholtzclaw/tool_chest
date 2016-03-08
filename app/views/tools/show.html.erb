@@ -1,0 +1,17 @@
+<h1> <%= flash[:notice] %> </h1>
+
+<div class="tool-info">
+<h3> <%= @tool.name %> </h3>
+<p> Quantity: <%= @tool.quantity %></p>
+<p> Price: <%= @tool.formatted_price %></p>
+<p> Category: <%= @tool.category.name if @tool.category %> </p>
+<br>
+</div>
+<p>
+  <%= link_to "Destroy #{@tool.name}", tool_path(@tool.id), method: :delete %>
+</p>
+<p>
+  <%= link_to "Edit this tool's details", edit_tool_path(@tool.id) %>
+</p>
+<br>
+<%= link_to "Home", tools_path %>

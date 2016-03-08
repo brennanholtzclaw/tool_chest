@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToolChest</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= flash.now[:notice] %>
+  <p>
+   <strong>Newest tool:</strong> <%= most_recent_tool.name %>
+  </p>
+
+<%= yield %>
+
+</body>
+</html>
